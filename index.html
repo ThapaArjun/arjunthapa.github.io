@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dr Arjun Thapa | Wildlife Ecology and Conservation</title><meta name="description" content="Dr Arjun Thapa, wildlife ecologist at Tribhuvan University, Nepal. Research, publications, teaching and contact."><link rel="canonical" href="https://thapaarjun.github.io/"><style>
+    :root {
+      --bg: #f5f7f8;
+      --surface: #ffffff;
+      --surface-2: #f0f4f4;
+      --text: #1c2630;
+      --muted: #5b6773;
+      --accent: #0f766e;
+      --accent-dark: #0b5d57;
+      --border: #dbe3e6;
+      --max: 1120px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.2px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d5d58 0%, #0f766e 45%, #124d59 100%);
+      color: white;
+      padding: 68px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .hero img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 4px solid rgba(255,255,255,0.85);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 2.6rem;
+      line-height: 1.15;
+    }
+
+    .hero .role {
+      margin: 0 0 12px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #d8fffb;
+    }
+
+    .hero .affiliation {
+      margin: 0 0 18px;
+      color: #ebfffd;
+      font-size: 1rem;
+    }
+
+    .hero p {
+      margin: 0 0 16px;
+      max-width: 760px;
+      color: #f3fffe;
+    }
+
+    .hero-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .hero-links a {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-links a:hover {
+      text-decoration: none;
+      background: rgba(255,255,255,0.16);
+    }
+
+    main {
+      padding: 34px 0 60px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .card h2 {
+      margin: 0 0 16px;
+      color: var(--accent-dark);
+      font-size: 1.45rem;
+      line-height: 1.2;
+    }
+
+    .card h3 {
+      margin: 22px 0 8px;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .lead {
+      font-size: 1.02rem;
+      color: var(--text);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .tag {
+      background: var(--surface-2);
+      color: var(--accent-dark);
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    .pub-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .pub {
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pub:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .side-list {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .side-list li {
+      margin-bottom: 10px;
+    }
+
+    .quick-facts p {
+      margin: 0 0 10px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 11px 15px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      text-decoration: none;
+      background: var(--accent-dark);
+    }
+
+    footer {
+      padding: 10px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+
+      .hero img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .hero h1 {
+        font-size: 2.1rem;
+      }
+
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 22px;
+      }
+
+      .hero-links {
+        gap: 10px;
+      }
+
+      .hero-links a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+html {scroll-padding-top:150px;}
+a:focus-visible {outline:3px solid #b97800;outline-offset:4px;}
+.publication{padding:18px 0;border-bottom:1px solid var(--border);}
+.card .grid{grid-template-columns:1fr 1fr;gap:16px;}
+.card .card{padding:18px;box-shadow:none;margin:0;border-radius:12px;}
+@media(max-width:600px){.card .grid{grid-template-columns:1fr}.nav{gap:10px 16px}.topbar{position:static}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body><header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#home">Dr Arjun Thapa</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header><section class="hero" id="home">
+    <div class="container hero-grid">
+      <!-- Upload your photograph as profile.jpg -->
+      <img class="portrait" src="profile.jpg"
+           alt="Portrait of Dr Arjun Thapa">
+
+      <div>
+        <h1>Dr Arjun Thapa</h1>
+        <p class="role">Assistant Professor of Wildlife Conservation</p>
+        <p>
+          Institute of Forestry, Hetauda Campus ·
+          Tribhuvan University, Nepal
+        </p>
+        <p>
+          I study the ecology and conservation of threatened wildlife
+          in the Himalayas. My research combines field surveys,
+          spatial modelling and conservation genetics to understand
+          how environmental change affects species and their habitats.
+        </p>
+        <div class="hero-links">
+          <a  href="mailto:arjun.thapa@hc.tu.edu.np">
+            Email
+          </a>
+          <a  href="#research">Research</a>
+          <a  href="#publications">Publications</a>
+        </div>
+      </div>
+    </div>
+  </section><main class="container"><div class="grid"><div><section class="card" id="about">
+        <h2>About Me</h2>
+        <p>
+          My academic work connects ecological research with conservation practice,
+          student mentorship and community-based wildlife monitoring in Nepal.
+        </p>
+        <p>
+          I completed my PhD in Ecology at the University of Chinese
+          Academy of Sciences, conducting research at the Institute
+          of Zoology. I subsequently undertook postdoctoral research
+          at the Chinese Academy of Sciences through the President’s
+          International Fellowship Initiative.
+        </p>
+        <p>
+          Alongside research, I teach wildlife conservation,
+          supervise students and contribute to conservation planning
+          and community-based wildlife monitoring.
+        </p></section><section class="card" id="research">
+        <h2>Research</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Red Panda Conservation</h3>
+            <p>
+              Understanding distribution, habitat requirements,
+              genetic diversity and conservation threats across
+              the Himalayan region.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Climate Change and Biodiversity</h3>
+            <p>
+              Assessing species vulnerability, potential range shifts
+              and climate refugia under environmental change.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Wildlife Corridors</h3>
+            <p>
+              Studying habitat occupancy, landscape connectivity
+              and land-cover change to inform corridor conservation.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Human–Wildlife Coexistence</h3>
+            <p>
+              Investigating wildlife conflict and practical mitigation
+              approaches that support conservation and local livelihoods.
+            </p>
+          </article>
+        </div></section><section class="card" id="publications">
+        <h2>Selected Publications</h2>
+
+        <article class="publication">
+          <strong>Thapa, A., Ma, T., Wei, F. &amp; Hu, Y. (2026).</strong>
+          Low genetic diversity in climate change refugia threatens
+          the endangered Himalayan red panda Ailurus fulgens.
+          <em>Integrative Zoology.</em>
+          <a href="https://doi.org/10.1111/1749-4877.70103">
+            Read article
+          </a>
+        </article>
+
+        <article class="publication">
+          <strong>Thapa, A. and colleagues (2025).</strong>
+          Differential vulnerability of key threatened mammals to
+          climate and land cover changes in the Central Himalayas.
+          <em>Ecosphere.</em>
+          <a href="https://doi.org/10.1002/ecs2.70242">
+            Read article
+          </a>
+        </article>
+
+        <article class="publication">
+          <strong>Hu, Y., Thapa, A. and colleagues (2020).</strong>
+          Genomic evidence for two phylogenetic species and
+          long-term population bottlenecks in red pandas.
+          <em>Science Advances.</em>
+          <a href="https://doi.org/10.1126/sciadv.aax5751">
+            Read article
+          </a>
+        </article>
+
+        <article class="publication">
+          <strong>Thapa, A., Hu, Y. &amp; Wei, F. (2018).</strong>
+          The endangered red panda (Ailurus fulgens):
+          Ecology and conservation approaches across the entire range.
+          <em>Biological Conservation.</em>
+          <a href="https://doi.org/10.1016/j.biocon.2018.02.014">
+            Read article
+          </a>
+        </article></section><section class="card" id="teaching">
+        <h2>Teaching and Supervision</h2>
+        <p>My teaching experience includes:</p>
+        <ul>
+          <li>Conservation Biology</li>
+          <li>Wildlife Biology and Ecology</li>
+          <li>Human–Wildlife Interface Management</li>
+          <li>Mammalogy and Ornithology</li>
+          <li>Biodiversity Conservation and Management</li>
+        </ul>
+        <p>
+          I have supervised MSc research on red panda habitat,
+          leopard occupancy and conflict, Chinese pangolin distribution,
+          hispid hare habitat and human–wildlife interactions.
+        </p></section><section class="card" id="service">
+        <h2>Service and Recognition</h2>
+        <ul>
+          <li>
+            Founding President, Small Mammals Conservation
+            &amp; Research Foundation
+          </li>
+          <li>Member, IUCN SSC Lagomorph Specialist Group</li>
+          <li>Dr. Pralad Yonzon Conservation Award, 2023</li>
+        </ul></section></div><aside aria-label="Profile and contact">
+<section class="card quick-facts"><h2>Profile</h2>
+<p><strong>Name:</strong> Dr Arjun Thapa</p>
+<p><strong>Position:</strong> Assistant Professor of Wildlife Conservation</p>
+<p><strong>Institution:</strong> Tribhuvan University</p>
+<p><strong>Campus:</strong> Institute of Forestry, Hetauda Campus</p>
+<p><strong>Location:</strong> Hetauda, Nepal</p></section>
+<section class="card"><h2>Research Areas</h2><ul class="side-list">
+<li>Himalayan mammal conservation</li><li>Conservation genetics</li>
+<li>Species distribution modelling</li><li>Climate refugia and habitat connectivity</li>
+<li>Human–wildlife coexistence</li><li>Camera trapping and biodiversity data</li></ul></section>
+<section class="card"><h2>Education</h2><p><strong>PhD in Ecology</strong><br>University of Chinese Academy of Sciences, 2018</p>
+<p><strong>Master’s in Biodiversity and Environmental Management</strong><br>Tribhuvan University and University of Bergen, 2014</p>
+<p><strong>MSc in Zoology</strong><br>Tribhuvan University, 2008</p></section>
+<section class="card" id="contact"><h2>Contact</h2><p>For research collaboration, teaching and student research enquiries:</p>
+<p><strong>Dr Arjun Thapa</strong><br>Institute of Forestry, Hetauda Campus<br>Tribhuvan University<br>Hetauda, Nepal</p>
+<p><a href="mailto:arjun.thapa@hc.tu.edu.np">arjun.thapa@hc.tu.edu.np</a></p>
+<a class="button" href="mailto:arjun.thapa@hc.tu.edu.np">Contact by email</a></section></aside></div></main><footer>© Dr Arjun Thapa · Tribhuvan University, Nepal</footer></body></html>
